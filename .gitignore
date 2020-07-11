@@ -1,6 +1,7 @@
 # Directories
 #
-/[Ll]ibrary/
+*/[Bb]in/
+*/[Ll]ibrary/
 */[Tt]emp/
 */[Oo]bj/
 */[Oo]bj/

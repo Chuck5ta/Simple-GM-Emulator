@@ -5,8 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimpleGMEmulator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="" Height="450" Width="800">
     <Grid>
-        
+        <Label x:Name="titlelbl" Content="Simple GM Emulator" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="212,23,0,0" VerticalAlignment="Top" Height="54" Width="349" FontFamily="Arial" FontSize="32" FontWeight="Bold" />
+        <Label x:Name="chaosAndOrderlbl" Content="0" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="352,85,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="32" Height="49" Width="73" />
+        <Label x:Name="basePercentageLbl_Copy" Content="Chaos And Order" HorizontalAlignment="Left" Margin="321,121,0,0" VerticalAlignment="Top" Height="35" Width="150" FontFamily="Arial" FontSize="16" ToolTip="Influences the Roll of Fate and Critical Event"/>
+        <Button x:Name="rollOfFateBtn" Content="Roll of Fate" HorizontalAlignment="Left" Margin="86,355,0,0" VerticalAlignment="Top" Width="111" Height="25" FontFamily="Arial" FontSize="16" ToolTip="Answer YES/NO questions" />
+        <Button x:Name="criticalEventBtn" Content="Critical Event" HorizontalAlignment="Left" Margin="253,355,0,0" VerticalAlignment="Top" Width="111" Height="25" FontFamily="Arial" FontSize="16" ToolTip="What critical event has occurred"/>
+        <Button x:Name="thingBtn" Content="Thing" HorizontalAlignment="Left" Margin="378,355,0,0" VerticalAlignment="Top" Width="111" Height="25" FontFamily="Arial" FontSize="16" ToolTip="The focus of this event" />
+        <Button x:Name="howBtn" Content="How" HorizontalAlignment="Left" Margin="502,355,0,0" VerticalAlignment="Top" Width="111" Height="25" FontFamily="Arial" FontSize="16" ToolTip="How the thing was affected" />
+        <Border BorderBrush="#FF9A9A9A" BorderThickness="5" HorizontalAlignment="Left" Height="178" Margin="279,161,0,0" VerticalAlignment="Top" Width="290"/>
+        <Border BorderBrush="#FF060606" BorderThickness="5" HorizontalAlignment="Left" Height="170" Margin="284,165,0,0" VerticalAlignment="Top" Width="280"/>
+        <Label x:Name="resultLbl" Content="Result" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="299,172,0,0" VerticalAlignment="Top" Height="162" Width="256" FontFamily="Arial" FontSize="24"/>
+        <Button x:Name="resetBtn" Content="RESET" HorizontalAlignment="Left" Margin="647,352,0,0" VerticalAlignment="Top" Width="105" FontFamily="Arial" FontSize="24" FontWeight="Bold" Height="36"/>
+        <RadioButton x:Name="certainRad" Content="Certain" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="86,172,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18" IsChecked="True"/>
+        <RadioButton x:Name="almostCertainRad" Content="Almost certain" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="86,198,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
+        <RadioButton x:Name="probableRad" Content="Probable" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="86,222,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
+        <RadioButton x:Name="evenChanceRad" Content="Even chance" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="86,244,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
+        <RadioButton x:Name="probablyNotRad" Content="Probably not" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="86,268,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
+        <RadioButton x:Name="almostCertainlyNotRad" Content="Almost certainly not" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="86,292,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
+        <RadioButton x:Name="impossibleRad" Content="Impossible" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="86,314,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
+        <Label x:Name="basePercentageLbl" Content="Base %" HorizontalAlignment="Left" Margin="22,137,0,0" VerticalAlignment="Top" Height="35" Width="73" FontFamily="Arial" FontSize="18" ToolTip="Altered by the ChaosAndOrder Factor"/>
+        <Label x:Name="base100Lbl" Content="100%" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="30,170,0,0" Width="50" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+        <Label x:Name="base93Lbl" Content="93%" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="30,194,0,0" Width="50" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+        <Label x:Name="base70Lbl" Content="70%" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="30,219,0,0" Width="50" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+        <Label x:Name="base50Lbl" Content="50%" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="30,240,0,0" Width="50" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+        <Label x:Name="base30Lbl" Content="30%" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="30,264,0,0" Width="50" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+        <Label x:Name="base7Lbl" Content="7%" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="30,288,0,0" Width="50" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+        <Label x:Name="base0Lbl" Content="0%" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="30,310,0,0" Width="50" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+        <Border BorderBrush="Black" BorderThickness="2,2,1,2" HorizontalAlignment="Left" Height="177"  Margin="581,73,0,0" VerticalAlignment="Top" Width="193"/>
+        <Canvas HorizontalAlignment="Left" Height="173" Margin="583,75,0,0" VerticalAlignment="Top" Width="187" Background="#FFD9D9D9"  ToolTip="Choose how the scene ended for the party">
+            <Label x:Name="sceneTitleLbl" Content="Scene End" Canvas.Left="42" Canvas.Top="10" Height="30" Width="105" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Arial" FontSize="16" FontWeight="Bold"/>
+            <Button x:Name="allWellBtn" Content="All went well" Canvas.Left="48" Canvas.Top="57" Width="96" Height="29" ToolTip="Order is restored to the world (+10 to ChaosAndOrder)" Background="Silver"/>
+            <Button x:Name="allNotWellBtn" Content="Did not go well" Canvas.Left="49" Canvas.Top="104" Width="96" Height="33" ToolTip="Chaos enters the world (-10 to ChaosAndOrder)" Background="Silver"/>
+        </Canvas>
+
     </Grid>
 </Window>
