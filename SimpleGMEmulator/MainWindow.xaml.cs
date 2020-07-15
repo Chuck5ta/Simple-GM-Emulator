@@ -21,7 +21,7 @@ namespace SimpleGMEmulator
         {
             // Roll a random number between 1 and 100
             Random random = new Random();
-            int randomNumber = random.Next(1, 100);
+            int randomNumber = random.Next(1, 101);
 
             resultText2.Text = "You rolled: " + randomNumber;
             resultText2.Text += "\n+ ChaosAndOrder: " + chaosAndorder;
@@ -131,7 +131,7 @@ namespace SimpleGMEmulator
 
             // Roll a random number between 1 and 100
             Random random = new Random();
-            int randomNumber = random.Next(1, 12);
+            int randomNumber = random.Next(1, 13);
 
             // add ChaosAndOrder factor to the result
             randomNumber += chaosAndorder / 10;
@@ -151,7 +151,7 @@ namespace SimpleGMEmulator
 
             // Roll a random number between 1 and 100
             Random random = new Random();
-            int randomNumber = random.Next(1, 100);
+            int randomNumber = random.Next(1, 101);
 
             // add ChaosAndOrder factor to the result
             randomNumber += chaosAndorder;
@@ -173,7 +173,7 @@ namespace SimpleGMEmulator
 
             // Roll a random number between 1 and 100
             Random random = new Random();
-            int randomNumber = random.Next(1, 12);
+            int randomNumber = random.Next(1, 13);
 
             if (randomNumber <= 4)
                 resultText2.Text = "\n\nA change has occurred!";
@@ -199,6 +199,207 @@ namespace SimpleGMEmulator
         private void resetBtn_Click(object sender, RoutedEventArgs e)
         {
             resetEverything();
+        }
+
+        private void npcBtn_Click(object sender, RoutedEventArgs e)
+        {
+            // Randomly pick an NPC
+            resultText.Text = "";
+            resultText2.Text = "";
+
+            Random random = new Random();
+            
+            // NPC
+            int npn = random.Next(1, 12); // random value from 1 to 11
+            resultText.Text += npn;
+            switch (npn)
+            {
+                case 1:
+                    resultText.Text = "Dwarf";
+                    break;
+                case 2:
+                    resultText.Text = "Elf";
+                    break;
+                case 3:
+                    resultText.Text = "Gnome";
+                    break;
+                case 4:
+                    resultText.Text = "Goblin";
+                    break;
+                case 5:
+                    resultText.Text = "Half Elf";
+                    break;
+                case 6:
+                    resultText.Text = "Halfling";
+                    break;
+                case 7:
+                    resultText.Text = "Half Orc";
+                    break;
+                case 8:
+                    resultText.Text = "Human"; // Lots of humans in the world
+                    break;
+                case 9:
+                    resultText.Text = "Human"; // Lots of humans in the world
+                    break;
+                case 10:
+                    resultText.Text = "Orc"; // Lots of humans in the world
+                    break;
+                default:
+                    resultText.Text = "Skeleton";
+                    break;
+            }
+
+        }
+
+        private void objectBtn_Click(object sender, RoutedEventArgs e)
+        {
+            // Randomly pick an NPC
+            resultText2.Text = "";
+
+            // Roll a random number between 1 and 100
+            Random random = new Random();
+            int randomNumber = random.Next(1, 5);
+
+            switch (randomNumber)
+            {
+                case 1:
+                    resultText.Text = "Brick";
+                    break;
+                case 2:
+                    resultText.Text = "Earth";
+                    break;
+                case 3:
+                    resultText.Text = "Fire";
+                    break;
+                case 4:
+                    resultText.Text = "Glass";
+                    break;
+                case 5:
+                    resultText.Text = "Leather";
+                    break;
+                case 6:
+                    resultText.Text = "Metal";
+                    break;
+                case 7:
+                    resultText.Text = "Smoke";
+                    break;
+                case 8:
+                    resultText.Text = "Steam";
+                    break;
+                case 9:
+                    resultText.Text = "Stone";
+                    break;
+                case 10:
+                    resultText.Text = "Water";
+                    break;
+                default:
+                    resultText.Text = "Wood";
+                    break;
+            }
+        }
+
+        private void creatureBtn_Click(object sender, RoutedEventArgs e)
+        {
+            // Randomly pick an NPC
+            resultText2.Text = "";
+
+            // Roll a random number between 1 and 100
+            Random random = new Random();
+            int randomNumber = random.Next(1, 17);
+
+            switch (randomNumber)
+            {
+                case 1:
+                    resultText.Text = "Bear";
+                    break;
+                case 2:
+                    resultText.Text = "Cat";
+                    break;
+                case 3:
+                    resultText.Text = "Deer";
+                    break;
+                case 4:
+                    resultText.Text = "Dog";
+                    break;
+                case 5:
+                    resultText.Text = "Dragon";
+                    break;
+                case 6:
+                    resultText.Text = "Gorilla";
+                    break;
+                case 7:
+                    resultText.Text = "Horse";
+                    break;
+                case 8:
+                    resultText.Text = "Lion";
+                    break;
+                case 9:
+                    resultText.Text = "Monkey"; // Lots of humans in the world
+                    break;
+                case 10:
+                    resultText.Text = "Mountain lion"; // Lots of humans in the world
+                    break;
+                case 11:
+                    resultText.Text = "Mouse"; // Lots of humans in the world
+                    break;
+                case 12:
+                    resultText.Text = "Rabbit"; // Lots of humans in the world
+                    break;
+                case 13:
+                    resultText.Text = "Rat"; // Lots of humans in the world
+                    break;
+                case 14:
+                    resultText.Text = "Tiger"; // Lots of humans in the world
+                    break;
+                case 15:
+                    resultText.Text = "Unicorn"; // Lots of humans in the world
+                    break;
+                default:
+                    resultText.Text = "Orc";
+                    break;
+            }
+        }
+
+        /*
+         * This picks a main theme for the adventurer
+         */
+        private void adventureBtn_Click(object sender, RoutedEventArgs e)
+        {
+            // Randomly pick an NPC
+            resultText.Text = "";
+            resultText2.Text = "";
+
+            Random random = new Random();
+
+            // NPC
+            int adventureObjective = random.Next(1, 9); // random value from 1 to 11
+            switch (adventureObjective)
+            {
+                case 1:
+                    resultText2.Text = "\n\nAssassinate someone";
+                    break;
+                case 2:
+                    resultText2.Text = "\n\nRecover lost/stolen goods";
+                    break;
+                case 3:
+                    resultText2.Text = "\n\nRescue someone";
+                    break;
+                case 4:
+                    resultText2.Text = "\n\nRevenge";
+                    break;
+                case 5:
+                    resultText2.Text = "\n\nRob someone";
+                    break;
+                case 6:
+                    resultText2.Text = "\n\nSearch for lost treasure";
+                    break;
+                case 7:
+                    resultText2.Text = "\n\nSearch for missing person";
+                    break;
+                default:
+                    resultText2.Text = "\n\nSteel treasure";
+                    break;
+            }
         }
     }
 }

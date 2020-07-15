@@ -5,18 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimpleGMEmulator"
         mc:Ignorable="d"
-        Title="" Height="450" Width="800">
+        ResizeMode="NoResize"
+        Title="" 
+        Height="490" 
+        Width="800">
     <Grid>
+        <!-- Cool comment -->
         <Label x:Name="titlelbl" Content="Simple GM Emulator" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="212,23,0,0" VerticalAlignment="Top" Height="54" Width="349" FontFamily="Arial" FontSize="32" FontWeight="Bold" />
         <Label x:Name="chaosAndOrderlbl" Content="0" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="352,85,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="32" Height="49" Width="73" />
         <Label x:Name="basePercentageLbl_Copy" Content="Chaos And Order" HorizontalAlignment="Left" Margin="321,121,0,0" VerticalAlignment="Top" Height="35" Width="150" FontFamily="Arial" FontSize="16" ToolTip="Influences the Roll of Fate and Critical Event"/>
-        <Button x:Name="rollOfFateBtn" Content="Roll of Fate" HorizontalAlignment="Left" Margin="73,355,0,0" VerticalAlignment="Top" Width="111" Height="25" FontFamily="Arial" FontSize="16" ToolTip="Answer YES/NO questions and altered by Chaos and Order." Click="rollOfFateBtn_Click"/>
+        <Button x:Name="rollOfFateBtn" Content="Roll of Fate" HorizontalAlignment="Left" Margin="71,373,0,0" VerticalAlignment="Top" Width="111" Height="51" FontFamily="Arial" FontSize="16" ToolTip="Answer YES/NO questions and altered by Chaos and Order." Click="rollOfFateBtn_Click"/>
         <Button x:Name="criticalEventBtn" Content="Critical Event" HorizontalAlignment="Left" Margin="253,355,0,0" VerticalAlignment="Top" Width="111" Height="25" FontFamily="Arial" FontSize="16" ToolTip="What critical event has occurred" Click="criticalEventBtn_Click"/>
         <Button x:Name="thingBtn" Content="Thing" HorizontalAlignment="Left" Margin="378,355,0,0" VerticalAlignment="Top" Width="111" Height="25" FontFamily="Arial" FontSize="16" ToolTip="The focus of this event" Click="thingBtn_Click" />
         <Button x:Name="howBtn" Content="How" HorizontalAlignment="Left" Margin="502,355,0,0" VerticalAlignment="Top" Width="111" Height="25" FontFamily="Arial" FontSize="16" ToolTip="How the thing was affected" Click="howBtn_Click" />
         <Border BorderBrush="#FF9A9A9A" BorderThickness="5" HorizontalAlignment="Left" Height="178" Margin="279,161,0,0" VerticalAlignment="Top" Width="290"/>
         <Border BorderBrush="#FF060606" BorderThickness="5" HorizontalAlignment="Left" Height="170" Margin="284,165,0,0" VerticalAlignment="Top" Width="280"/>
-        <Button x:Name="resetBtn" Content="RESET &#xa;   ALL" HorizontalAlignment="Left" Margin="678,322,0,0" VerticalAlignment="Top" Width="84" FontFamily="Arial" FontSize="18" FontWeight="Bold" Height="58" Click="resetBtn_Click"/>
+        <Button x:Name="resetBtn" Content="RESET &#xa;   ALL" HorizontalAlignment="Left" Margin="678,386,0,0" VerticalAlignment="Top" Width="84" FontFamily="Arial" FontSize="18" FontWeight="Bold" Height="58" Click="resetBtn_Click"/>
         <RadioButton x:Name="almostCertainRad" Content="Almost certain" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="82,216,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18" IsChecked="True"/>
         <RadioButton x:Name="probableRad" Content="Probable" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="82,240,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
         <RadioButton x:Name="evenChanceRad" Content="Even chance" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="82,262,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
@@ -37,6 +41,12 @@
         <TextBlock x:Name="resultText" HorizontalAlignment="Left" Margin="385,285,0,0" TextWrapping="Wrap" Text="Result" VerticalAlignment="Top" Width="120" FontFamily="Arial" FontSize="18" FontWeight="Bold" Height="24"/>
         <TextBlock x:Name="resultText2" HorizontalAlignment="Left" Margin="300,186,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" FontFamily="Arial" FontSize="18" FontWeight="Bold" Height="94"/>
         <Label x:Name="label" Content="Let your imagination run wild" HorizontalAlignment="Left" Margin="334,380,0,0" VerticalAlignment="Top" Width="242" FontFamily="Arial" FontSize="14"/>
+        <!-- Random NPC, Creature, Object -->
+        <Border BorderBrush="#FF888888" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="245,405,0,0" VerticalAlignment="Top" Width="376"/>
+        <Button x:Name="npcBtn" Content="NPC?" HorizontalAlignment="Left" Margin="253,412,0,0" VerticalAlignment="Top" Width="111" Height="25" FontFamily="Arial" FontSize="16" ToolTip="Randomly picks an NPC" BorderThickness="1" Click="npcBtn_Click" />
+        <Button x:Name="creatureBtn" Content="Creature?" HorizontalAlignment="Left" Margin="378,412,0,0" VerticalAlignment="Top" Width="111" Height="25" FontFamily="Arial" FontSize="16" ToolTip="Randomly picks a creature" Click="creatureBtn_Click" />
+        <Button x:Name="objectBtn" Content="Object?" HorizontalAlignment="Left" Margin="502,412,0,0" VerticalAlignment="Top" Width="111" Height="25" FontFamily="Arial" FontSize="16" ToolTip="Randomly picks an object" Click="objectBtn_Click" />
+        <Button x:Name="adventureBtn" Content="Adventure &#xa; Objective" HorizontalAlignment="Left" Margin="602,268,0,0" VerticalAlignment="Top" Width="152" FontFamily="Arial" FontSize="18" FontWeight="Bold" Height="58" Click="adventureBtn_Click"/>
 
     </Grid>
 </Window>
