@@ -401,5 +401,12 @@ namespace SimpleGMEmulator
                     break;
             }
         }
+
+        private void creatureMakerBtn_Click(object sender, RoutedEventArgs e)
+        {
+            // Open the NPC and Creature Maker window
+            Window newWin = new Window1();
+            newWin.Show();
+        }
     }
 }

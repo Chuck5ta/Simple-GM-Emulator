@@ -47,6 +47,7 @@
         <Button x:Name="creatureBtn" Content="Creature?" HorizontalAlignment="Left" Margin="378,412,0,0" VerticalAlignment="Top" Width="111" Height="25" FontFamily="Arial" FontSize="16" ToolTip="Randomly picks a creature" Click="creatureBtn_Click" />
         <Button x:Name="objectBtn" Content="Object?" HorizontalAlignment="Left" Margin="502,412,0,0" VerticalAlignment="Top" Width="111" Height="25" FontFamily="Arial" FontSize="16" ToolTip="Randomly picks an object" Click="objectBtn_Click" />
         <Button x:Name="adventureBtn" Content="Adventure &#xa; Objective" HorizontalAlignment="Left" Margin="602,268,0,0" VerticalAlignment="Top" Width="152" FontFamily="Arial" FontSize="18" FontWeight="Bold" Height="58" Click="adventureBtn_Click"/>
+        <Button x:Name="creatureMakerBtn" Content="      NPC  and &#xa; Creature Maker" HorizontalAlignment="Left" Margin="38,75,0,0" VerticalAlignment="Top" Width="144" Height="59" FontFamily="Arial" FontSize="18" FontWeight="Bold" Click="creatureMakerBtn_Click"/>
 
     </Grid>
 </Window>
